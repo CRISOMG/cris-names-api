@@ -1,0 +1,24 @@
+{
+  "name": "prueba-tus10segundos_wefere",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "DEBUG=express:* nodemon index.js"
+  },
+  "author": "CriOMG <cristiancaraballo112@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "engines": {
+    "node": "15.x"
+  }
+}
