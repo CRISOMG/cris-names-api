@@ -1,11 +1,11 @@
 {
-  "name": "prueba-tus10segundos_wefere",
+  "name": "cris-name-api",
   "version": "1.0.0",
   "description": "",
   "main": "",
   "scripts": {
     "start": "node index.js",
-    "dev": "DEBUG=express:* nodemon index.js"
+    "dev": "NODE_ENV=development DEBUG=express:* nodemon index.js"
   },
   "author": "CriOMG <cristiancaraballo112@gmail.com>",
   "license": "ISC",
