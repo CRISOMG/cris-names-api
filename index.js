@@ -13,7 +13,7 @@ app.use(
 app.use(express.json());
 
 router(app);
-
-app.listen(3000, () => {
-  console.log('Server listening in http://localhost:3000 \nENV: ' + process.env.NODE_ENV);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server listening in http://localhost:${PORT}\nENV: ${process.env.NODE_ENV}`);
 });

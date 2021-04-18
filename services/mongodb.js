@@ -18,7 +18,7 @@ class MongoLib {
       MongoLib.connection = new Promise((resolve, reject) => {
         this.client.connect((err) => {
           if (err) {
-            reject(err);
+            return reject(err);
           }
 
           console.log('Connected succesfully to mongo:');
