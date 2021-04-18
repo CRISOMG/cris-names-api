@@ -22,7 +22,6 @@ class MongoLib {
           }
 
           console.log('Connected succesfully to mongo:');
-          console.log(new Date());
 
           resolve(this.client.db(this.dbName));
         });
@@ -34,8 +33,6 @@ class MongoLib {
 
   getAll(collection) {
     return this.connect().then((db) => {
-      console.log(db.collection(collection).find().toArray());
-
       return db.collection(collection).find().toArray();
     });
   }
@@ -57,9 +54,7 @@ class MongoLib {
   update(collection, id, data) {
     return this.connect()
       .then((db) => {
-        return db
-          .collection(collection)
-          .updateOne({ _id: ObjectId(id) }, { $set: data }, { upsert: true });
+        return db.collection(collection).updateOne({ _id: ObjectId(id) }, { $set: data }, { upsert: true });
       })
       .then((result) => result.upsertedId || id);
   }

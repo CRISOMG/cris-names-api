@@ -26,9 +26,9 @@ function router(app) {
   router.post('/', async (req, res, next) => {
     const { body, headers } = req;
 
-    const dataCreated = await usersService.createUser(body);
+    const userCreatedId = await usersService.createUser(body);
 
-    res.status(201).json(dataCreated);
+    res.status(201).json(userCreatedId);
   });
 
   router.put('/:id', async (req, res, next) => {
